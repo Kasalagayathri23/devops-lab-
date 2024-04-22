@@ -1,0 +1,51 @@
+<html>
+<html>
+<head>
+    <!-- Include the same header as in home.html -->
+</head>
+<body bgcolor="VIOLET "align="center">
+    <div class="container">
+    <h2>Catalog Page</h2>
+
+    <div class="product">
+        <img src="C:\Users\hp\OneDrive\Desktop\images.jpeg" alt="Apple Watch Ultra 2">
+        <h3>Apple Watch Ultra 2</h3>
+        <p>Apple Watch Ultra 2 [GPS + Cellular 49mm] Smartwatch with Rugged Titanium Case
+	 & Blue Alpine Loop Large. Fitness Tracker, Precision GPS, Action Button, 
+	Extra-Long Battery Life, Bright Retina Display.</p>
+        <p>Price: $1080.56</p>
+        <button onclick="addToCart('Product 1', 1080.56)">Add to Cart</button>
+    </div>
+    
+    <div class="product">
+        <img src="C:\Users\hp\OneDrive\Desktop\image 2.jpg" alt="JBL Cinema SB271">
+        <h3>JBL Cinema SB271</h3>
+        <p>JBL Cinema SB271, Dolby Digital Soundbar with Wireless Subwoofer for
+	 Extra Deep Bass, 2.1 Channel Home Theatre with Remote, HDMI ARC, 
+	Bluetooth & Optical Connectivity (220W)</p>
+        <p>Price: $156.24</p>
+        <button onclick="addToCart('Product 1', 156.24)">Add to Cart</button>
+    </div>
+ 
+    <div class="product">
+        <img src="C:\Users\hp\OneDrive\Desktop\apple.webp" alt="Apple iPhone 14 Pro Max">
+        <h3>Apple iPhone 14 Pro Max</h3>
+        <p>Apple iPhone 14 Pro Max (512 GB) - Grey</p>
+        <p>Price: $1670.72</p>
+        <button onclick="addToCart('Product 1', 1670.72)">Add to Cart</button>
+    </div>
+ 
+    </div>
+
+<script>
+    function addToCart(productName, price) {
+        var cartItem = { name: productName, price: price };
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push(cartItem);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert('Product added to cart!');
+    }
+</script>
+
+</body>
+</html>
